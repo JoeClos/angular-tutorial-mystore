@@ -4,11 +4,11 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class CartService {
 
-   items = [];
-
+   items: any []= [];
+  product: any;
   constructor( private http: HttpClient) { }
 
-   addToCart(product) {
+   addToCart(product: any) {
     this.items.push(product);
   }
 

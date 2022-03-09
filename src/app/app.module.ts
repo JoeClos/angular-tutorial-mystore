@@ -14,6 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { BackButtonDirective } from './back-button.directive';
+import { CartService } from './cart.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { BackButtonDirective } from './back-button.directive';
       { path: 'shipping', component: ShippingComponent },
     ])
   ],
-  providers: [],
+  providers: [CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
