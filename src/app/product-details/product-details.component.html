@@ -1,0 +1,21 @@
+<h3 class="text-red">Product Details</h3>
+
+<div class="card p-3 mb-5" *ngIf="product">
+  <img [src]="product.imgUrl" class="img-fluid mx-auto d-block"/>
+  <h3 class="center">{{ product.name }}</h3>
+  <h4 class="center">{{ product.price | currency }}</h4>
+  <p>{{ product.description }}</p>
+
+  <button 
+  [routerLink]="['/cart']"
+  (click)="addToCart(product)" 
+  class="btn btn-dark"> Add to Cart
+  </button>
+
+  <div class="pt-2">
+    <app-backbtn></app-backbtn>
+  </div>
+  
+
+</div>
+

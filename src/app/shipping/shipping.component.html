@@ -1,0 +1,9 @@
+<h5>Shipping Prices</h5>
+
+<section class="shipping-item">
+  <div class="shipping-item bg-light p-3" *ngFor="let shipping of shippingCosts | async">
+    <span class="bold"> {{ shipping.type }}:  </span>
+    <span class="ml-2"> {{ shipping.price | currency }} </span>
+      <hr>
+  </div>
+</section>

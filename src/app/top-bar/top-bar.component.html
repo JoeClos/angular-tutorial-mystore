@@ -1,0 +1,24 @@
+<div class="container-fluid pt-1" style="background-color: #A52A2A; padding: 2rem">
+    <div class="row">
+    <div class="col-6 nav-text"><a>
+    <h2 class="pt-1" [routerLink]="['/']">
+        <fa-icon [icon]="faMobileAlt"></fa-icon> 
+        <span>
+        Phone Model Store
+        </span>
+        <sup>
+            <fa-icon [icon]="faTrademark"></fa-icon>
+        </sup>
+    </h2>
+  </a>
+  </div>
+  
+  <div class="col-6 pb-1 d-flex justify-content-end" style="margin-top: 1rem;">
+    <a [routerLink]="['/cart']" 
+    class="btn btn-light" style="color: #A52A2A ; background-color: wheat; border: #A52A2A;">
+    <fa-icon [icon]="faShoppingCart"></fa-icon>
+    Checkout</a>
+    </div>
+  </div>
+  
+  </div>
