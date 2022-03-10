@@ -1,1 +1,55 @@
-<p>product-list works!</p>
+<figure>
+  <img src="../../assets/images/iso-iphone-xs-smaller.jpg" class="img-fluid" />
+</figure>
+<hr />
+<h2 class="phone-models">Phone Models</h2>
+
+
+<div class="card-group">
+  <div
+    class="m-3 card rounded border border border-secondary"
+    *ngFor="let product of products; "
+  >
+    <div *ngIf="product.imgUrl">
+      <figure class="display-phones">
+        <img [src]="product.imgUrl" class="card-img-top" alt="..." />
+      </figure>
+      <div class="card-body">
+        <h5 class="card-title">
+          <a
+            [title]="product.name + ' details'"
+            [routerLink]="['/products', product.id]"
+          >
+            {{ product.name }}
+          </a>
+        </h5>
+        <p class="card-text">{{ product.price | currency }}</p>
+        <p
+          class="card-text"
+          *ngIf="product.short_description"
+          [routerLink]="['/products', product.id]"
+        >
+          Description: {{ product.short_description }}>
+        </p>
+
+        <button class="btn btn-info ml-5 " (click)="addToCart(product)">
+          Buy Now
+        </button>
+        <button class="btn btn-primary btn-sm mr-2" (click)="share()">
+          <fa-icon [icon]="faFacebookF"></fa-icon>
+        </button>
+        <button class="btn btn-primary btn-sm mr-2" (click)="share()">
+          <fa-icon [icon]="faTwitterSquare"></fa-icon>
+        </button>
+        <button class="btn btn-primary btn-sm" (click)="share()">
+          <fa-icon [icon]="faInstagram"></fa-icon>
+        </button>
+
+        
+
+        <app-product-alerts  [product]="product" (notify)="onNotify()">
+        </app-product-alerts>
+      </div>
+    </div>
+  </div>
+</div>

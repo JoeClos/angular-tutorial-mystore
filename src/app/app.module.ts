@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { BackButtonDirective } from './back-button.directive';
 import { CartService } from './cart.service';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CartService } from './cart.service';
     ProductAlertsComponent,
     CartComponent,
     BackbtnComponent,
-    BackButtonDirective
+    BackButtonDirective,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
